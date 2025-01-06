@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlGDiBHD5RL-NAOIh4YC3vL9z5R8F9v8bdOCq9f9eHJE76XUFc');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1, footer p {
+    color: black;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    padding: 1rem;
+    margin: 1rem;
+    overflow: auto;
+}
+
+main ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+}
+
+main ul li a {
+    color: white;
+    padding: 10px 20px;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+main ul li a:hover {
+    background-color: #333;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.contact-info a {
+    color: black;
+    text-decoration: none;
+}
+
+contact-info a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header, .dark-mode footer {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode main ul li a {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.dark-mode main ul li a:hover {
+    background-color: #ddd;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode main {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background-image: none;
+    background-color: #333;
+}
+
+body.dark-mode a {
+    color: #ffffff;
+}
+
+body.dark-mode th {
+    background-color: #333;
+}
+
+body.dark-mode button {
+    background-color: #333;
+}
+
+body.dark-mode button:hover {
+    background-color: #555;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.6);
+    color: black;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+form {
+    margin: 1rem 0;
+}
+
+input, button, select {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+form input[type="text"]#patientId {
+    border: 2px solid #007BFF;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+#medicalHistory {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.history-entry {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.history-entry p {
+    margin: 0.5rem 0;
+}
+
+form#appointmentForm {
+    margin: 1rem 0;
+}
+
+table#appointmentTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table#appointmentTable, table#appointmentTable th, table#appointmentTable td {
+    border: 1px solid #ddd;
+}
+
+table#appointmentTable th, table#appointmentTable td {
+    padding: 10px;
+    text-align: left;
+}
+
+table#appointmentTable th {
+    background-color: #007BFF;
+    color: white;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.6);
+    color: black;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

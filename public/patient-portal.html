@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Portal</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Patient Portal</h1>
+    </header>
+
+    <main>
+        <form id="viewHistoryForm">
+            <input type="text" id="patientId" placeholder="Patient ID" required>
+            <button type="submit">View Medical History</button>
+        </form>
+        <form id="viewAppointmentsForm">
+            <input type="text" id="viewPatientId" placeholder="Patient ID" required>
+            <button type="submit">View Appointments</button>
+        </form>
+        <div id="noHistoryMessage" style="display:none;">No medical history found.</div>
+        <div id="updateHistorySection" style="display:none;">
+            <!-- Medical history details will be displayed here -->
+        </div>
+        <div id="noAppointmentsMessage" style="display:none;">No appointments found.</div>
+        <table id="appointmentTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patient ID</th>
+                    <th>Doctor ID</th>
+                    <th>Date & Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Appointments will be displayed here -->
+            </tbody>
+        </table>
+        <a href="index.html">Back to Home</a>
+    </main>
+
+    <script src="assets/js/patient-portal.js" defer></script>
+    <script src="assets/js/dark-mode-toggle.js" defer></script>
+    <footer>
+        <p>&copy; 2025 Hospital Management System</p>
+    </footer>
+</body>
+
+</html>

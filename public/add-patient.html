@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Patient</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add New Patient</h1>
+    </header>
+
+    <main>
+        <form id="addPatientForm" action="/submit-patient" method="POST">
+            <input type="text" id="patientId" placeholder="Patient ID" required>
+            <input type="text" id="patientName" placeholder="Patient Name" required>
+            <input type="text" id="patientCondition" placeholder="Condition" required>
+            <input type="number" id="patientAge" placeholder="Age" required>
+            <input type="text" pattern="\d{10}" title="Please enter exactly 10 digits" id="patientPhone" placeholder="Phone" required>
+            <input type="email" id="patientEmail" placeholder="Email" required>
+            <input type="text" id="patientAddress" placeholder="Address" required><br>
+            <label for="bloodGroup">Blood Group:</label>
+            <select id="bloodGroup" name="bloodGroup" required>
+                <option value="">Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select><br>
+            <button type="submit">Add Patient</button>
+        </form>
+        <a href="index.html">Back to Home</a>
+    </main>
+
+    <script src="assets/js/scripts.js" defer></script>
+    <script>
+        // Dark mode toggle script
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
+    <footer>
+        <p>&copy; 2025 Hospital Management System</p>
+    </footer>
+</body>
+</html>
